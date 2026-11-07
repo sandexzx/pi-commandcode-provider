@@ -1,4 +1,4 @@
-export const COMMAND_CODE_CLI_VERSION = "1.88.0"
+export const COMMAND_CODE_CLI_VERSION = "1.88.5"
 
 export type CommandCodeInputType = "text" | "image"
 export type CommandCodeReasoningEffort =
@@ -11,7 +11,7 @@ export type CommandCodeReasoningEffort =
   | "max"
 
 /**
- * Generated from command-code@1.88.0 by `npm run sync:commandcode-catalog`.
+ * Generated from command-code@1.88.5 by `npm run sync:commandcode-catalog`.
  * Do not edit manually.
  */
 export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCodeInputType[]>> = {
@@ -29,6 +29,7 @@ export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCod
   "deepseek/deepseek-v4-flash-vision-exp": ["text", "image"],
   "deepseek/deepseek-v4.1-flash": ["text", "image"],
   "deepseek/deepseek-v4.1-flash-fast": ["text", "image"],
+  "deepseek/deepseek-v4.1-flash-ultrafast": ["text", "image"],
   "google/gemini-3.1-flash-lite": ["text", "image"],
   "google/gemini-3.5-flash": ["text", "image"],
   "google/gemini-3.5-flash-lite": ["text", "image"],
@@ -47,6 +48,7 @@ export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCod
   "gpt-6-luna": ["text", "image"],
   "gpt-6-sol": ["text", "image"],
   "gpt-6.1-sol": ["text", "image"],
+  "gpt-6.1-terra": ["text", "image"],
   "meta/muse-spark-1.1": ["text", "image"],
   "meta/muse-spark-1.2": ["text", "image"],
   "meta/muse-spark-1.2-contributor": ["text", "image"],
@@ -62,6 +64,7 @@ export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCod
   "moonshotai/Kimi-K2.7-Code": ["text", "image"],
   "moonshotai/Kimi-K2.7-Code-Highspeed": ["text", "image"],
   "moonshotai/Kimi-K3": ["text", "image"],
+  "moonshotai/Kimi-K3.1-Pro": ["text", "image"],
   "nvidia/nemotron-3.5-super-vl": ["text", "image"],
   "ornith/ornith-1.5-122b": ["text", "image"],
   "Qwen/Qwen3.6-Plus": ["text", "image"],
@@ -74,6 +77,7 @@ export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCod
   "Qwen/Qwen3.8-Max-Prime": ["text", "image"],
   "Qwen/Qwen3.8-Omni-Flash": ["text", "image"],
   "sakana/fugu-ultra": ["text", "image"],
+  "stealth/crouton-alpha": ["text", "image"],
   "stepfun/Step-3.7-Flash": ["text", "image"],
   "stepfun/Step-5-Preview": ["text", "image"],
   "thinkingmachines/inkling": ["text", "image"],
@@ -105,6 +109,7 @@ export const MODEL_REASONING: Readonly<Record<string, true>> = {
   "deepseek/deepseek-v4-pro": true,
   "deepseek/deepseek-v4.1-flash": true,
   "deepseek/deepseek-v4.1-flash-fast": true,
+  "deepseek/deepseek-v4.1-flash-ultrafast": true,
   "google/gemini-3.1-flash-lite": true,
   "google/gemini-3.5-flash": true,
   "google/gemini-3.5-flash-lite": true,
@@ -123,7 +128,9 @@ export const MODEL_REASONING: Readonly<Record<string, true>> = {
   "gpt-6-luna": true,
   "gpt-6-sol": true,
   "gpt-6.1-sol": true,
+  "gpt-6.1-terra": true,
   "inclusionai/ling-3.1-flash": true,
+  "inclusionai/ling-3.1-flash-1019": true,
   "meituan/LongCat-2.0": true,
   "meta/muse-spark-1.1": true,
   "meta/muse-spark-1.2": true,
@@ -138,10 +145,10 @@ export const MODEL_REASONING: Readonly<Record<string, true>> = {
   "moonshotai/Kimi-K2.7-Code": true,
   "moonshotai/Kimi-K2.7-Code-Highspeed": true,
   "moonshotai/Kimi-K3": true,
+  "moonshotai/Kimi-K3.1-Pro": true,
   "nvidia/nemotron-3-ultra-550b-a55b": true,
   "nvidia/nemotron-3.5-super-vl": true,
   "ornith/ornith-1.5-122b": true,
-  "poolside/laguna-s-2.1-free": true,
   "Qwen/Qwen3.6-Max-Preview": true,
   "Qwen/Qwen3.6-Plus": true,
   "Qwen/Qwen3.7-Flash": true,
@@ -155,6 +162,7 @@ export const MODEL_REASONING: Readonly<Record<string, true>> = {
   "Qwen/Qwen3.8-Omni-Flash": true,
   "reflection/beam:free": true,
   "sakana/fugu-ultra": true,
+  "stealth/crouton-alpha": true,
   "stealth/glyph-cluster:free": true,
   "stepfun/Step-3.5-Flash": true,
   "stepfun/Step-3.7-Flash": true,
@@ -189,6 +197,7 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
   "deepseek/deepseek-v4-pro": ["off", "high", "max"],
   "deepseek/deepseek-v4.1-flash": ["off", "low", "high", "max"],
   "deepseek/deepseek-v4.1-flash-fast": ["off", "low", "high", "max"],
+  "deepseek/deepseek-v4.1-flash-ultrafast": ["off", "low", "high", "max"],
   "google/gemini-3.1-flash-lite": ["low", "medium", "high"],
   "google/gemini-3.5-flash": ["low", "medium", "high"],
   "google/gemini-3.5-flash-lite": ["low", "medium", "high"],
@@ -207,7 +216,9 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
   "gpt-6-luna": ["low", "medium", "high", "xhigh", "max"],
   "gpt-6-sol": ["low", "medium", "high", "xhigh", "max"],
   "gpt-6.1-sol": ["low", "medium", "high", "xhigh", "max"],
+  "gpt-6.1-terra": ["low", "medium", "high", "xhigh", "max"],
   "inclusionai/ling-3.1-flash": ["low", "medium", "high"],
+  "inclusionai/ling-3.1-flash-1019": ["low", "medium", "high"],
   "meta/muse-spark-1.1": ["low", "medium", "high", "xhigh"],
   "meta/muse-spark-1.2": ["low", "medium", "high", "xhigh"],
   "meta/muse-spark-1.2-contributor": ["low", "medium", "high", "xhigh"],
@@ -219,6 +230,7 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
   "MiniMaxAI/MiniMax-M3": ["low", "medium", "high"],
   "mistral/mistral-large-4": ["low", "medium", "high"],
   "moonshotai/Kimi-K3": ["low", "high", "max"],
+  "moonshotai/Kimi-K3.1-Pro": ["low", "high", "max"],
   "nvidia/nemotron-3.5-super-vl": ["low", "medium", "high"],
   "Qwen/Qwen3.8-27B": ["low", "medium", "xhigh"],
   "Qwen/Qwen3.8-Flash": ["low", "medium", "xhigh"],
@@ -228,6 +240,7 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
   "Qwen/Qwen3.8-Omni-Flash": ["low", "medium", "xhigh"],
   "reflection/beam:free": ["low", "medium", "high", "xhigh", "max"],
   "sakana/fugu-ultra": ["high", "xhigh"],
+  "stealth/crouton-alpha": ["low", "medium", "high", "xhigh", "max"],
   "stealth/glyph-cluster:free": ["low", "medium", "high", "xhigh"],
   "stepfun/Step-5-Preview": ["low", "medium", "high"],
   "tencent/hy4-preview": ["low", "medium", "high"],
@@ -242,12 +255,13 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
 
 export const MODEL_MAX_OUTPUT_TOKENS: Readonly<Record<string, number>> = {
   "inclusionai/ling-3.1-flash": 32_768,
+  "inclusionai/ling-3.1-flash-1019": 262_144,
   "mistral/mistral-large-4": 262_144,
-  "poolside/laguna-s-2.1-free": 32_768,
   "Qwen/Qwen3.8-27B": 32_768,
   "Qwen/Qwen3.8-Max-Prime": 131_072,
   "Qwen/Qwen3.8-Omni-Flash": 131_072,
   "reflection/beam:free": 131_072,
+  "stealth/crouton-alpha": 943_718,
   "stealth/glyph-cluster:free": 256_000,
   "z-ai/glm-5.3-flash": 131_072,
   "z-ai/glm-5.3-flashx": 131_072,
