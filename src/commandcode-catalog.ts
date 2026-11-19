@@ -1,4 +1,4 @@
-export const COMMAND_CODE_CLI_VERSION = "1.89.1"
+export const COMMAND_CODE_CLI_VERSION = "1.91.1"
 
 export type CommandCodeInputType = "text" | "image"
 export type CommandCodeReasoningEffort =
@@ -11,7 +11,7 @@ export type CommandCodeReasoningEffort =
   | "max"
 
 /**
- * Generated from command-code@1.89.1 by `npm run sync:commandcode-catalog`.
+ * Generated from command-code@1.91.1 by `npm run sync:commandcode-catalog`.
  * Do not edit manually.
  */
 export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCodeInputType[]>> = {
@@ -51,6 +51,8 @@ export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCod
   "gpt-6-sol": ["text", "image"],
   "gpt-6.1-sol": ["text", "image"],
   "gpt-6.1-terra": ["text", "image"],
+  "gpt-6.2-astra": ["text", "image"],
+  "gpt-6.2-sol": ["text", "image"],
   "meta/muse-ember": ["text", "image"],
   "meta/muse-spark-1.1": ["text", "image"],
   "meta/muse-spark-1.2": ["text", "image"],
@@ -79,9 +81,12 @@ export const MODEL_INPUT_MODALITIES: Readonly<Record<string, readonly CommandCod
   "Qwen/Qwen3.8-Max-0902": ["text", "image"],
   "Qwen/Qwen3.8-Max-Prime": ["text", "image"],
   "Qwen/Qwen3.8-Omni-Flash": ["text", "image"],
+  "Qwen/Qwen4-Max": ["text", "image"],
   "sakana/fugu-ultra": ["text", "image"],
   "stepfun/Step-3.7-Flash": ["text", "image"],
   "stepfun/Step-5-Preview": ["text", "image"],
+  "tencent/hy4": ["text", "image"],
+  "tencent/hy4-flash": ["text", "image"],
   "thinkingmachines/inkling": ["text", "image"],
   "thinkingmachines/inkling-2-small:free": ["text", "image"],
   "thinkingmachines/inkling-small": ["text", "image"],
@@ -134,6 +139,8 @@ export const MODEL_REASONING: Readonly<Record<string, true>> = {
   "gpt-6-sol": true,
   "gpt-6.1-sol": true,
   "gpt-6.1-terra": true,
+  "gpt-6.2-astra": true,
+  "gpt-6.2-sol": true,
   "inclusionai/ling-3.1-flash": true,
   "inclusionai/ling-3.1-flash-1019": true,
   "meituan/LongCat-2.0": true,
@@ -166,12 +173,16 @@ export const MODEL_REASONING: Readonly<Record<string, true>> = {
   "Qwen/Qwen3.8-Max-0902": true,
   "Qwen/Qwen3.8-Max-Prime": true,
   "Qwen/Qwen3.8-Omni-Flash": true,
+  "Qwen/Qwen4-Max": true,
+  "recursive/flint-v1.0:free": true,
   "sakana/fugu-ultra": true,
   "stealth/glyph-cluster:free": true,
   "stepfun/Step-3.5-Flash": true,
   "stepfun/Step-3.7-Flash": true,
   "stepfun/Step-5-Preview": true,
   "tencent/hy3-paid": true,
+  "tencent/hy4": true,
+  "tencent/hy4-flash": true,
   "tencent/hy4-preview": true,
   "thinkingmachines/inkling": true,
   "thinkingmachines/inkling-2-small:free": true,
@@ -224,6 +235,8 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
   "gpt-6-sol": ["low", "medium", "high", "xhigh", "max"],
   "gpt-6.1-sol": ["low", "medium", "high", "xhigh", "max"],
   "gpt-6.1-terra": ["low", "medium", "high", "xhigh", "max"],
+  "gpt-6.2-astra": ["low", "medium", "high", "xhigh", "max"],
+  "gpt-6.2-sol": ["low", "medium", "high", "xhigh", "max"],
   "inclusionai/ling-3.1-flash": ["low", "medium", "high"],
   "inclusionai/ling-3.1-flash-1019": ["low", "medium", "high"],
   "meta/muse-ember": ["low", "medium", "high", "xhigh", "max"],
@@ -246,9 +259,12 @@ export const MODEL_EFFORTS: Readonly<Record<string, readonly CommandCodeReasonin
   "Qwen/Qwen3.8-Max-0902": ["low", "medium", "xhigh"],
   "Qwen/Qwen3.8-Max-Prime": ["low", "medium", "xhigh"],
   "Qwen/Qwen3.8-Omni-Flash": ["low", "medium", "xhigh"],
+  "Qwen/Qwen4-Max": ["off", "low", "high", "xhigh"],
   "sakana/fugu-ultra": ["high", "xhigh"],
   "stealth/glyph-cluster:free": ["low", "medium", "high", "xhigh"],
   "stepfun/Step-5-Preview": ["low", "medium", "high"],
+  "tencent/hy4": ["low", "medium", "high"],
+  "tencent/hy4-flash": ["off", "high"],
   "tencent/hy4-preview": ["low", "medium", "high"],
   "thinkingmachines/inkling-2-small:free": ["low", "medium", "high", "max"],
   "xai/grok-4.5": ["low", "medium", "high"],
